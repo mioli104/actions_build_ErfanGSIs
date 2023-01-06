@@ -15,7 +15,7 @@ on:
     
 env:
   ROM_URL: https://github.com/xiaomi-mt6853-devs/releases/releases/download/7/lineage-19.1-20221210-UNOFFICIAL-cannon.zip
-  ROM_NAME: Lineage
+  ROM_NAME: Generic
   BUILD_TYPE: ab
   TZ: Asia/Shanghai
 
