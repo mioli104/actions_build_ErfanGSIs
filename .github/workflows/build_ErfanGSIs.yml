@@ -35,6 +35,8 @@ jobs:
             sudo add-apt-repository ppa:deadsnakes/ppa
             curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py 
             sudo -E apt-get -qq install git wget python3.11
+            whereis python 
+            whereis python3.11
             sudo purge python-pip
             sudo python3.11 ./get-pip.py
        
