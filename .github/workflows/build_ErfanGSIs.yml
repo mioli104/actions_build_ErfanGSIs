@@ -34,7 +34,7 @@ jobs:
             sudo apt install software-properties-common
             sudo add-apt-repository ppa:deadsnakes/ppa
             curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py 
-            sudo -E apt-get -qq install git wget python3.8
+            sudo -E apt-get -qq install git wget python3.8-dev python3.8-full
             whereis python 
             whereis python3.8
             sudo apt purge python-pip
