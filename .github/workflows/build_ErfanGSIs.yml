@@ -31,9 +31,11 @@ jobs:
        - name: Initialization environment
          run: |
             sudo apt update
+            sudo apt install software-properties-common
+            sudo add-apt-repository ppa:deadsnakes/ppa
             curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py 
             sudo apt purge python -y
-            sudo -E apt-get -qq install git wget python3
+            sudo -E apt-get -qq install git wget python3.8
             sudo python3 ./get-pip.py
        
        - name: Clone ErfanGSI Source Code
