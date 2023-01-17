@@ -34,13 +34,15 @@ jobs:
             sudo apt install software-properties-common
             sudo add-apt-repository ppa:deadsnakes/ppa
             curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py 
-            sudo -E apt-get -qq install git wget python3.11
+            sudo -E apt-get -qq install git wget python3.8
             whereis python 
-            whereis python3.11
+            whereis python3.8
             sudo apt purge python-pip
             sudo rm /usr/bin/python
-            sudo ln -s /usr/bin/python3.11 /usr/bin/python
-            sudo python3.11 ./get-pip.py
+            sudo rm /usr/bin/python3
+            sudo ln -s /usr/bin/python3.8 /usr/bin/python
+            sudo ln -s /usr/bin/python3.8 /usr/bin/python3
+            sudo python ./get-pip.py
        
        - name: Clone ErfanGSI Source Code
          run: git clone --recurse-submodules https://github.com/erfanoabdi/ErfanGSIs.git ErfanGSIs
