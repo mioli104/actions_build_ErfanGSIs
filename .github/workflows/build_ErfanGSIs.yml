@@ -30,7 +30,8 @@ jobs:
            
        - name: Initialization environment
          run: |
-            sudo -E apt-get -qq install git wget python python3
+            sudo apt purge python -y
+            sudo -E apt-get -qq install git wget python3
        
        - name: Clone ErfanGSI Source Code
          run: git clone --recurse-submodules https://github.com/erfanoabdi/ErfanGSIs.git ErfanGSIs
