@@ -39,7 +39,7 @@ jobs:
             whereis python3.11
             sudo apt purge python-pip
             sudo rm /usr/bin/python
-            ln -s /usr/bin/python3.11 /usr/bin/python
+            sudo ln -s /usr/bin/python3.11 /usr/bin/python
             sudo python3.11 ./get-pip.py
        
        - name: Clone ErfanGSI Source Code
