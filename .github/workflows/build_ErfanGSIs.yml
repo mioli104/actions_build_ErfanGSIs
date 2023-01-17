@@ -21,7 +21,7 @@ env:
 
 jobs:
   build:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-18.04
     if: github.event.repository.owner.id == github.event.sender.id
 
     steps:
@@ -33,7 +33,7 @@ jobs:
             sudo -E apt-get -qq install git wget python-is-python3
        
        - name: Clone ErfanGSI Source Code
-         run: git clone --recurse-submodules https://github.com/mioli104/ErfanGSIs.git ErfanGSIs
+         run: git clone --recurse-submodules https://github.com/erfanoabdi/ErfanGSIs.git ErfanGSIs
          
        - name: Fix exit
          run: |
