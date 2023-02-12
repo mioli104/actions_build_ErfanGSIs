@@ -14,14 +14,14 @@ on:
     types: [started]
     
 env:
-  ROM_URL: https://github.com/xiaomi-mt6853-devs/releases/releases/download/7/lineage-19.1-20221210-UNOFFICIAL-cannon.zip
+  ROM_URL: https://github.com/AOSP-on-Cannon/releases/releases/download/v5/cannon-user-20220707-1047.zip
   ROM_NAME: Generic
   BUILD_TYPE: ab
   TZ: Asia/Shanghai
 
 jobs:
   build:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-20.04
     if: github.event.repository.owner.id == github.event.sender.id
 
     steps:
@@ -30,22 +30,10 @@ jobs:
            
        - name: Initialization environment
          run: |
-            sudo apt update
-            sudo apt install software-properties-common
-            sudo add-apt-repository ppa:deadsnakes/ppa
-            curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py 
-            sudo -E apt-get -qq install git wget python3.8-dev python3.8-full
-            whereis python 
-            whereis python3.8
-            sudo apt purge python-pip
-            sudo rm /usr/bin/python
-            sudo rm /usr/bin/python3
-            sudo ln -s /usr/bin/python3.8 /usr/bin/python
-            sudo ln -s /usr/bin/python3.8 /usr/bin/python3
-            sudo python ./get-pip.py
+            sudo -E apt-get -qq install git wget python-is-python3
        
        - name: Clone ErfanGSI Source Code
-         run: git clone --recurse-submodules https://github.com/VegaBobo/ErfanGSIs.git ErfanGSIs
+         run: git clone --recurse-submodules https://github.com/mioli104/ErfanGSIs.git ErfanGSIs
          
        - name: Fix exit
          run: |
